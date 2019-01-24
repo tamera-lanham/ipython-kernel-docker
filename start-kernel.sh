@@ -18,8 +18,14 @@ STDIN_PORT=$(jq '.stdin_port' < $connection_file)
 HB_PORT=$(jq '.hb_port' < $connection_file)
 IOPUB_PORT=$(jq '.iopub_port' < $connection_file)
 
+echo control ${CONTROL_PORT}
+echo shell ${SHELL_PORT}
+echo stdin ${STDIN_PORT}
+echo hb ${HB_PORT}
+echo iopub ${IOPUB_PORT}
+
 # Run docker image with the connection file mounted in, and ports forwarded
-docker run -d --rm \
+docker run -d --rm -t \
     -v $connection_file:/tmp/connection-file.json:ro \
     -p $CONTROL_PORT:$CONTROL_PORT \
     -p $SHELL_PORT:$SHELL_PORT \
