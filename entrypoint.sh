@@ -21,4 +21,4 @@ echo stdin ${STDIN_PORT}
 echo hb ${HB_PORT}
 echo iopub ${IOPUB_PORT}
 
-python3 -m ipykernel_launcher --ip=0.0.0.0 --hb=$HB_PORT --shell=$SHELL_PORT --iopub=$IOPUB_PORT --stdin=$STDIN_PORT --control=$CONTROL_PORT -f $CONNECTION_FILE
+python3 -m ipykernel_launcher --ip=0.0.0.0 --hb=$HB_PORT --shell=$SHELL_PORT --iopub=$IOPUB_PORT --stdin=$STDIN_PORT --control=$CONTROL_PORT  -f ${connection_file}

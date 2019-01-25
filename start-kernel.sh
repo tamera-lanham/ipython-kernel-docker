@@ -8,6 +8,7 @@ fi
 # Script settings
 DOCKER_IMAGE=python-kernel
 
+# This thing should be a full path by Jupyter
 connection_file=$1
 
 # Get the port number out
@@ -26,7 +27,7 @@ echo iopub ${IOPUB_PORT}
 
 # Run docker image with the connection file mounted in, and ports forwarded
 docker run -d --rm -t \
-    -v $connection_file:/tmp/connection-file.json:ro \
+    -v $connection_file:/tmp/connection-file.json \
     -p $CONTROL_PORT:$CONTROL_PORT \
     -p $SHELL_PORT:$SHELL_PORT \
     -p $STDIN_PORT:$STDIN_PORT \

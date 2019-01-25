@@ -3,4 +3,7 @@ build:
 	docker build --rm -t ${IMAGE_NAME} .
 
 test:
-	./start-kernel.sh connection_file.json
+	./start-kernel.sh /Users/lanhamt/Developer/ipython-kernel-docker/connection_file.json
+
+real:
+	jupyter console --kernel ipython-kernel-docker
