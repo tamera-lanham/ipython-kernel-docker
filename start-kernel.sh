@@ -25,7 +25,7 @@ echo stdin ${STDIN_PORT}
 echo hb ${HB_PORT}
 echo iopub ${IOPUB_PORT}
 
-sed -i 's;127.0.0.1;0.0.0.0;' ${connection_file}
+sed -i.bu 's;127.0.0.1;0.0.0.0;' "${connection_file}"
 
 # Run docker image with the connection file mounted in, and ports forwarded
 docker run -d --rm -t \
