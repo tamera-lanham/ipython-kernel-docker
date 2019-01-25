@@ -4,7 +4,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     jq \
     python3.5 \
     python3-pip \
-    python3-setuptools
+    python3-setuptools \
+    netcat
 
 RUN pip3 install ipython ipykernel
 
