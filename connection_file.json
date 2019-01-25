@@ -6,7 +6,7 @@
   "hb_port": 51115,
   "key": "19749810-8febfa748186a01da2f7b28c",
   "stdin_port": 51113,
-  "ip": "0.0.0.0",
+  "ip": "127.0.0.1",
   "signature_scheme": "hmac-sha256",
   "control_port": 51114
 }
