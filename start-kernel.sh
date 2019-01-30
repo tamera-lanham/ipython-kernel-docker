@@ -27,6 +27,8 @@ echo iopub ${IOPUB_PORT}
 
 sed -i.bu 's;127.0.0.1;0.0.0.0;' "${connection_file}"
 
+cat $connection_file
+
 # Run docker image with the connection file mounted in, and ports forwarded
 docker run -d --rm -t \
     -v $connection_file:/tmp/connection-file.json \

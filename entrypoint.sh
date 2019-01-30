@@ -7,6 +7,7 @@ else
 fi
 
 cat $connection_file
+
 # Modify the damn connection file to use proper IP address now
 sed -i 's;127.0.0.1;0.0.0.0;' ${connection_file}
 
