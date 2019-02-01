@@ -6,7 +6,7 @@ install:
 	jupyter kernelspec install $(PWD)
 
 test:
-	./start-kernel.sh $(PWD)/connection_file.json
+	./start-kernel.sh $(PWD)/sample_connection_file.json
 
 run:
 	jupyter console --kernel ipython-kernel-docker
