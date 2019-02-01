@@ -2,8 +2,11 @@ IMAGE_NAME=python-kernel
 build:
 	docker build --rm -t ${IMAGE_NAME} .
 
-test:
-	./start-kernel.sh /Users/lanhamt/Developer/ipython-kernel-docker/connection_file.json
+install:
+	jupyter kernelspec install $(PWD)
 
-real:
+test:
+	./start-kernel.sh $(PWD)/sample_connection_file.json
+
+run:
 	jupyter console --kernel ipython-kernel-docker
